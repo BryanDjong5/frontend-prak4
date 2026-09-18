@@ -1,0 +1,73 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: blue;
+    color: white;
+    margin-left: auto;
+}
+
+#tombol-nav {
+    display: flex;
+    margin-left: auto;
+    margin-top: 20px;
+    gap: 20px;
+    color: whitesmoke;
+}
+
+.href {
+    color: white;
+}
+
+#home {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: green;
+}
+
+.teks-home {
+    margin-left: 120px;
+}
+
+img {
+    display: flex;
+    height: 300px;
+    width: 300px;
+    margin-left: 900px;
+}
+
+.text-animation {
+    position: absolute;
+    left: 270px;
+    animation: textAnimation 8s infinite;
+}
+
+.pekerjaan2 {
+    animation-delay: 4s;
+    opacity: 0;
+}
+
+@keyframes textAnimation {
+    0%, 45% {
+        opacity: 1;
+    }
+
+    50%, 100% {
+        opacity: 0;
+    }
+    
+}
+
+#About {
+    margin-left: 300px;
+}
+
+.penjelasan-about {
+    margin-left: -50px;
+}
+
+#Education {
+     background-image: url('img/sekolah.jpg');
+}
+
