@@ -68,7 +68,8 @@ img {
 }
 
 #Education {
-     background-image: url('img/sekolah.jpg');
+    background-image: url('img/sekolah.jpg');
+    height: 500px;
 }
 
 #Education h1 {
@@ -94,18 +95,121 @@ img {
     margin-top: -200px;
 }
 
+#Contact {
+    background-image: url('img/HrdDanPelamar.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+.kirim-pesan {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+input {
+    border-radius: 5px solid black;
+    border-radius: 10px;
+}
+
+#pesan {
+    height: 200px;
+    width: 400px;
+}
+
+button {
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+}
+
 @media (max-width: 480px){
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
     #tombol-nav {
-        gap: 10px;
-        font-size: 14px;
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: 15px;
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .teks-home {
+        margin-left: 0;
+        max-width: 100%;
     }
 
     img {
         width: 150px;
         height: 150px;
+        margin-left: 0;
+        margin: 20px auto;
     }
 
-    .pendidikan1 .pendidikan2 {
+    .text-animation {
+        position: relative;
+        left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    #About {
+        margin-left: 0;
+        padding: 0 15px;
+        max-width: 100%;
+    }
+
+    .penjelasan-about {
+        margin-left: 0;
+    }
+
+    #Education {
+        height: auto;
+        padding: 20px 0;
+        background-size: cover;
+    }
+
+    .pendidikan1,
+    .pendidikan2 {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 90%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #Contact {
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .kirim-pesan {
+        width: 100%;
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    #pesan {
+        width: 100%;
+        height: 150px;
+    }
+
+    input {
         width: 100%;
     }
 }
@@ -124,7 +228,10 @@ img {
         margin-left: 20px;
         max-width: 95%
     }
+
 }
+
+
 
 
 
