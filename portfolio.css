@@ -1,54 +1,103 @@
+/* ===========================================
+   RESET & BASE
+   =========================================== */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    font-family: Arial, sans-serif;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Container pembungkus supaya konten tidak nempel tepi layar
+   dan otomatis menyesuaikan lebar di semua device */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===========================================
+   NAVBAR
+   =========================================== */
 .navbar {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     background-color: blue;
     color: white;
-    margin-left: auto;
+    padding: 15px 20px;
 }
 
 #tombol-nav {
     display: flex;
-    margin-left: auto;
-    margin-top: 20px;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(10px, 3vw, 20px);
     color: whitesmoke;
+    margin-top: 10px;
 }
 
 .href {
     color: white;
+    text-decoration: none;
+    font-size: clamp(13px, 2.5vw, 16px);
 }
 
+/* ===========================================
+   HOME SECTION
+   =========================================== */
 #home {
     display: flex;
+    flex-wrap: wrap-reverse;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
     background-color: black;
     color: green;
+    padding: clamp(20px, 5vw, 60px) 20px;
+    text-align: center;
 }
 
 .teks-home {
-    margin-left: 120px;
+    flex: 1 1 300px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-img {
-    display: flex;
-    height: 300px;
-    width: 300px;
-    margin-left: 900px;
+.teks-home h1 {
+    font-size: clamp(22px, 5vw, 36px);
+}
+
+.teks-home p {
+    font-size: clamp(14px, 3vw, 18px);
+}
+
+#home img {
+    flex: 0 1 300px;
+    width: min(300px, 70vw);
+    height: auto;
+    margin: 0 auto;
 }
 
 .text-animation {
-    position: absolute;
-    left: 270px;
+    position: relative;
+    left: 0;
+    width: 100%;
+    text-align: center;
     animation: textAnimation 8s infinite;
 }
 
@@ -61,186 +110,144 @@ img {
     0%, 45% {
         opacity: 1;
     }
-
     50%, 100% {
         opacity: 0;
     }
-    
 }
 
+/* ===========================================
+   ABOUT SECTION
+   =========================================== */
 #About {
-    margin-left: 300px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: clamp(20px, 5vw, 40px) 20px;
+    text-align: center;
 }
 
 .penjelasan-about {
-    margin-left: -50px;
+    margin: 10px 0 0 0;
+    font-size: clamp(14px, 3vw, 16px);
 }
 
+/* ===========================================
+   EDUCATION SECTION
+   =========================================== */
 #Education {
     background-image: url('img/sekolah.jpg');
-    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: clamp(30px, 6vw, 60px) 20px;
+    text-align: center;
 }
 
 #Education h1 {
-    color: white
+    color: white;
+    font-size: clamp(22px, 5vw, 32px);
+    margin-bottom: 20px;
 }
 
-.pendidikan1 {
-    padding: 20px;
-    margin-left: 100px;
-    border-radius: 10px;
-    border: 3px solid black;
-    background-color: azure;
-    width: 300px;
+.pendidikan-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
+.pendidikan1,
 .pendidikan2 {
     padding: 20px;
-    margin-left: 1000px;
     border-radius: 10px;
     border: 3px solid black;
     background-color: azure;
-    width: 300px;
-    margin-top: -200px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0;
 }
 
+/* ===========================================
+   CONTACT SECTION
+   =========================================== */
 #Contact {
     background-image: url('img/HrdDanPelamar.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 500px;
+    padding: clamp(30px, 6vw, 60px) 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .kirim-pesan {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     border-radius: 10px;
 }
 
 input {
-    border-radius: 5px solid black;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
     border-radius: 10px;
 }
 
 #pesan {
-    height: 200px;
-    width: 400px;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    resize: vertical;
 }
 
 button {
+    padding: 12px;
+    border: none;
     border-radius: 10px;
     background-color: green;
     color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-@media (max-width: 768px){
+button:hover {
+    background-color: darkgreen;
+}
+
+/* ===========================================
+   RESPONSIVE FINE-TUNING
+   (hanya penyesuaian kecil, karena layout utama
+   sudah fluid/otomatis lewat flexbox + clamp())
+   =========================================== */
+
+/* Tablet ke bawah */
+@media (max-width: 768px) {
     .navbar {
-        flex-wrap: wrap;
         justify-content: center;
         text-align: center;
     }
 
     #tombol-nav {
         margin-left: 0;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 8px;
-        font-size: 15px;
     }
 
     #home {
-        flex-direction: column;
         text-align: center;
-        padding: 20px 10px;
     }
+}
 
-    .teks-home {
-        margin-left: 0;
-        max-width: 100%;
-    }
-
-    img {
-        width: 150px;
-        height: 150px;
-        margin-left: 0;
-        margin: 20px auto;
-    }
-
-    .text-animation {
-        position: relative;
-        left: 0;
-        text-align: center;
-        width: 100%;
-    }
-
-    #About {
-        margin-left: 0;
-        padding: 0 15px;
-        max-width: 100%;
-    }
-
-    .penjelasan-about {
-        margin-left: 0;
-    }
-
-    #Education {
-        height: auto;
-        padding: 20px 0;
-        background-size: cover;
+/* HP kecil (di bawah 380px, misal HP lama/layar sempit) */
+@media (max-width: 380px) {
+    #tombol-nav {
+        gap: 8px;
     }
 
     .pendidikan1,
     .pendidikan2 {
-        margin-left: 0;
-        margin-top: 20px;
-        width: 90%;
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #Contact {
-        height: auto;
-        padding: 30px 0;
-    }
-
-    .kirim-pesan {
-        width: 100%;
-        width: 400px;
-        margin: 0 auto;
-    }
-
-    #pesan {
-        width: 100%;
-        height: 150px;
-    }
-
-    input {
-        width: 100%;
+        max-width: 95%;
     }
 }
-
-@media (max-width: 1000px){
-    .teks-home {
-        max-width: 100%;
-        margin-left: 18px;
-    }
-
-    img {
-        margin: 20px auto;
-    }
-
-    #About {
-        margin-left: 20px;
-        max-width: 95%
-    }
-
-}
-
-
-
-
-
