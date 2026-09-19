@@ -94,5 +94,37 @@ img {
     margin-top: -200px;
 }
 
+@media (max-width: 480px){
+    #tombol-nav {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .pendidikan1 .pendidikan2 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px){
+    .teks-home {
+        max-width: 100%;
+        margin-left: 18px;
+    }
+
+    img {
+        margin: 20px auto;
+    }
+
+    #About {
+        margin-left: 20px;
+        max-width: 95%
+    }
+}
+
 
 
