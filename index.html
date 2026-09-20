@@ -8,20 +8,18 @@
     <body>
         <div class="navbar">
             <h1>Bryan</h1>
-            <div id="tombol-nav">
-                <a href="#home">Home</a>
-                <a href="#About">About</a>
-                <a href="#Education">Education</a>
-                <a href="#Contact">Contact</a>
-            </div>
+                <button id="hamburger">☰</button>
+            <div id="tombol-nav"></div>
         </div>
         <div id="home">
             <div class="teks-home">
                 <h1>Hi, Saya Bryan</h1>
                 <h2>Saya adalah
-                    <span class="text-animation pekerjaan1">Full Stack Web Developer</span>
-                    <span class="text-animation pekerjaan2">Game Developer</span>
+                    <span class="pekerjaan1">Full Stack Web Developer</span>
+                    <span class="pekerjaan2">Game Developer</span>
+                </span>
                 </h2>
+                    <button type="submit" id="hubungin">Contact me</button>
             </div>
         <img src="img/foto-bryan.png">
     </div>
@@ -40,25 +38,121 @@
         </div>
         <div id="Education">
             <h1>Pendidikan</h1>
-            <div class="pendidikan1">
+            <img src="img/Logo-tutWuri.png">
+            <img src="img/logo-UNTAR.png">
+            <div class="pemisah-kotak-edu">
+            <div class="pendidikan">
             <ul>
+                <p>2009 - 2011</p>
                 <li>TK</li>
-                <p>TK Peach Blossom Harapan Indah Bekasi</p>
+                <p>TK Peach Blossom Harapan Indah Bekasi</p><br>
+                <p>2011 - 2017</p>
                 <li>SD</li>
-                <p>SD Mogallana</p>
+                <p>SD Mogallana</p><br>
+                <p>2017 - 2020</p>
+                <li>SMP</li>
+                <p>SMP inrii</p><br>
             </ul>
             </div>
         
-            <div class="pendidikan2">
+            <div class="pendidikan">
             <ul>
-                <li>SMP</li>
-                <p>SMP inrii</p>
+                <p>2020 - 2023</p>
                 <li>SMA</li>
-                <p>SMA inrii</p>
+                <p>SMA inrii</p><br>
+                <p>2023 - Sekarang</p>
                 <li>Perguruan Tinggi</li>
                 <p>Universitas Tarumanagara</p>
             </ul>
             </div>
+            </div>
+        </div>
+    </div>
+    <div id="Skills">
+        <h1>Skill</h1>
+        <div class="skill-wrap">
+        <div class="skill-box">
+            <img src="img/unity.png">
+            <h1>Unity</h1>
+        </div>
+        <div class="skill-box">
+            <img src="img/unreal.png">
+            <h1>Unreal Engine</h1>
+        </div>
+        <div class="skill-box">
+            <img src="img/blender.png">
+            <h1>Blender</h1>
+        </div>
+        <div class="skill-box">
+            <img src="img/laravel.png">
+            <h1>Laravel</h1>
+        </div>
+        <div class="skill-box">
+            <img src="img/html5.png">
+            <h1>HTML5</h1>
+        </div>
+        <div class="skill-box">
+            <img src="img/css.png">
+            <h1>CSS</h1>
+        </div>
+         <div class="skill-box">
+            <img src="img/js.png">
+            <h1>JavaScript</h1>
+        </div>
+        <div class="skill-box">
+            <img src="img/php.png">
+            <h1>PHP</h1>
+        </div>
+        <div class="skill-box">
+            <img src="img/mysql.png">
+            <h1>MYSQL</h1>
+        </div>
+        <div class="skill-box">
+            <img src="img/postgresql.png">
+            <h1>PostgreSQL</h1>
+        </div>
+        </div>
+    </div>
+    <div id="Project">
+        <h1>Project Saya</h1>
+        <div class="projectku">
+            <img src="img/market web.png">
+             <p>Website penjualan item dan akun game dengan harga yang sangat terjangkau</p>
+             <div class="tags-tekno">
+                <div class="teknologi">
+                    <p>PHP</p>
+                </div>
+                <div class="teknologi">
+                    <p>Laravel</p>
+                </div>
+                <div class="teknologi">
+                    <p>HTML</p>
+                </div>
+                <div class="teknologi">
+                    <p>MYSQL</p>
+                </div>
+                <a href="https://github.com/BryanDjong5/project-techno" class="tombol-repo">Lihat Repository</a>
+             </div>
+             </div>
+        <div class="projectku">
+            <img src="img/ProjectGameVR.png">
+            <p>Game VR untuk mobile dari unity membuat pemain terasa kaget dan seru karena<br>
+                zombie yang sangat ramai dan seru</p>
+            <div class="tags-tekno">
+                <div class="teknologi">
+                    <p>Unity</p>
+                </div>
+                <div class="teknologi">
+                    <p>C#</p>
+                </div>
+                <div class="teknologi">
+                    <p>Blender</p>
+                </div> 
+                <a href="https://drive.google.com/drive/folders/1ewXtoZqCgOMNHG9BEQuR3cxml0qxpEAz" class="tombol-apk">Lihat APK</a>
+                </div>
+             </div>
+             </div>
+        </div>
         </div>
     </div>
     <div id="Contact">
@@ -69,5 +163,6 @@
             <button type="submit" id="kirim">Kirim</button>
         </div>
     </div>
+    <script src="nav.js"></script>
     </body>
 </html>
