@@ -10,11 +10,12 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
-.tombol-nav a{
+#tombol-nav a {
     color: white;
+    text-decoration: none;
 }
 
-.tombol-nav a:hover {
+#tombol-nav a:active {
     color: white;
 }
 
