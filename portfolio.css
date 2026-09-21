@@ -530,6 +530,15 @@ button:hover {
     .projectku {
         max-width: 360px;
     }
+
+    .icon-sosmed {
+        width: 26px;
+        height: 26px;
+    }
+
+    .sosmed-wrap {
+        gap: 12px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -547,6 +556,7 @@ button:hover {
         margin-top: 10px;
         text-align: center;
     }
+    
 
     #tombol-nav.active {
         display: flex;
@@ -583,6 +593,15 @@ button:hover {
     .projectku {
         max-width: 95%;
     }
+
+    .icon-sosmed {
+        width: 24px;
+        height: 24px;
+    }
+
+    .sosmed-wrap {
+        gap: 10px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -596,5 +615,14 @@ button:hover {
 
     .skill-box {
         width: 100%;
+    }
+
+    .icon-sosmed {
+        width: 20px;
+        height: 20px;
+    }
+
+    .sosmed-wrap {
+        gap: 8px;
     }
 }
