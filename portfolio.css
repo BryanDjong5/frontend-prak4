@@ -80,13 +80,12 @@ img {
     font-size: clamp(14px, 3vw, 18px);
 }
 
-#home img {
+#home img:not(.icon-sosmed) {
     flex: 0 1 300px;
     width: min(300px, 70vw);
     height: auto;
     margin: 0 auto;
 }
-
 .teks-home h2 {
     text-align: center;
     font-size: clamp(18px, 4vw, 24px);
