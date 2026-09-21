@@ -60,7 +60,7 @@ img {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background-color: rgb(240, 225, 13);
+    background-color: rgb(207, 193, 1);
     color: green;
     padding: clamp(20px, 5vw, 60px) 20px;
     text-align: center;
@@ -169,7 +169,7 @@ img {
 }
 
 #About {
-    background-image: linear-gradient(rgba(163, 160, 160, 0.018), rgba(0, 0, 0, 0.6)), url('img/laptop.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('img/laptop.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -186,14 +186,15 @@ img {
 #About h1 {
     color: white;
     font-size: clamp(22px, 5vw, 32px);
+    font-style: italic;
     margin-bottom: 15px;
-    font-family: italic;
 }
 
 .penjelasan-about {
     max-width: 700px;
     margin: 0 auto;
-    font-family: italic;
+    padding: 0 15px;
+    font-style: italic;
 }
 
 .penjelasan-about p {
@@ -450,6 +451,75 @@ input {
 button:hover {
     background-color: darkgreen;
 }
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    padding: 20px;
+    background-color: rgb(192, 195, 19);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.footer-sosmed {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.footer-link {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-link a{
+   color: white;
+   text-decoration: none;
+}
+
+.pesan-terkirim {
+    display: none;
+    margin-top: 10px;
+    color: white;
+    font-size: 15px;
+}
+
+#kirim:focus + .pesan-terkirim {
+    display: block;
+    animation: pesanBerhasil 3s forwards;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+@keyframes pesanBerhasil {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 
 @media (max-width: 1024px) {
     .skill-box {
