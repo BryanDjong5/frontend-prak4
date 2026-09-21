@@ -60,7 +60,7 @@ img {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background-color: black;
+    background-color: rgb(240, 225, 13);
     color: green;
     padding: clamp(20px, 5vw, 60px) 20px;
     text-align: center;
@@ -92,16 +92,17 @@ img {
     font-size: clamp(18px, 4vw, 24px);
 }
 
-#hubungin {
+#hubungin, #hire {
     color: white;
     border-radius: 10px;
     border: 5px solid white;
     background-color: transparent;
     width: 100px;
     height: 50px;
-    margin-top: 15px;
+    margin-top: 30px;
     cursor: pointer;
 }
+
 
 .text-animation {
     position: relative;
@@ -111,45 +112,93 @@ img {
     vertical-align: middle;
 }
 
-.text-animation .pekerjaan1,
-.text-animation .pekerjaan2 {
+.text-animation .pekerjaan1 {
     position: absolute;
     left: 50%;
-    top: 0;
+    top: 5%;
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
     white-space: nowrap;
-    opacity: 0;
-    animation: textAnimation 4s infinite;
+}
+
+.text-animation .pekerjaan2 {
+    position: absolute;
+    left: 33%;
+    top: 5%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.pekerjaan1 {
+    animation: pekerjaan1 8s infinite;
 }
 
 .pekerjaan2 {
-    animation-delay: 2s;   
+    animation: pekerjaan2 8s infinite;
 }
 
-@keyframes textAnimation {
-    0% {
-        opacity: 0;
-    }
-    5%, 40% {
+@keyframes pekerjaan1 {
+    0%,
+    45% {
         opacity: 1;
     }
-    45%, 100% {
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes pekerjaan2 {
+    0%,
+    45% {
+        opacity: 0;
+    }
+
+    50%,
+    95% {
+        opacity: 1;
+    }
+
+    100% {
         opacity: 0;
     }
 }
 
 #About {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: clamp(20px, 5vw, 40px) 20px;
+    background-image: linear-gradient(rgba(163, 160, 160, 0.018), rgba(0, 0, 0, 0.6)), url('img/laptop.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: clamp(40px, 8vw, 80px) 20px;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    color: white;
+}
+
+#About h1 {
+    color: white;
+    font-size: clamp(22px, 5vw, 32px);
+    margin-bottom: 15px;
+    font-family: italic;
 }
 
 .penjelasan-about {
-    margin: 10px 0 0 0;
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: italic;
+}
+
+.penjelasan-about p {
     font-size: clamp(14px, 3vw, 16px);
+    line-height: 1.6;
 }
 
 #Education {
@@ -157,6 +206,7 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 800px;
     padding: clamp(30px, 6vw, 60px) 20px;
     text-align: center;
 }
@@ -204,8 +254,27 @@ img {
     width: 100%;
     max-width: 300px;
     text-align: left;
+    font-family: italic;
 }
 
+.sosmed-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 30%;
+    margin-top: 20px;
+    transform: translateX(170px);
+}
+
+.icon-sosmed {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin: 0;
+    cursor: pointer;
+    transition: 0.2s;
+}
 #Skills {
     text-align: center;
     padding: clamp(30px, 6vw, 50px) 20px;
